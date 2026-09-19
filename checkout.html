@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="description" content="Complete your Crave demo order with delivery details and a selected payment method.">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Checkout — Crave</title>
+
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+
+</head>
+
+
+<body>
+
+<header class="header">
+
+    <a href="index.html" class="logo">
+        🍔 Crave
+    </a>
+
+    <div class="header-actions">
+
+        <a href="cart.html" class="cart-btn">
+            ← Cart
+        </a>
+
+    </div>
+
+</header>
+
+
+<section class="page-hero">
+
+    <span class="eyebrow">
+        CHECKOUT
+    </span>
+
+    <h1>Almost there.</h1>
+
+    <p>
+        Enter your delivery information and place your order.
+    </p>
+
+</section>
+
+
+<main class="form-page">
+
+    <form
+        onsubmit="placeOrder(event)"
+    >
+
+        <div class="form-card">
+
+            <h2>Delivery details</h2>
+
+            <div class="form-grid">
+
+                <div class="form-group">
+
+                    <label for="checkoutName">
+                        Full name
+                    </label>
+
+                    <input
+                        required
+                        id="checkoutName"
+                        name="name"
+                        autocomplete="name"
+                        type="text"
+                        placeholder="Your name"
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="checkoutPhone">
+                        Phone number
+                    </label>
+
+                    <input
+                        required
+                        id="checkoutPhone"
+                        name="phone"
+                        autocomplete="tel"
+                        type="tel"
+                        placeholder="+234..."
+                    >
+
+                </div>
+
+
+                <div class="form-group full">
+
+                    <label for="checkoutAddress">
+                        Delivery address
+                    </label>
+
+                    <input
+                        required
+                        id="checkoutAddress"
+                        name="address"
+                        autocomplete="street-address"
+                        type="text"
+                        placeholder="Street address"
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="checkoutCity">
+                        City
+                    </label>
+
+                    <input
+                        required
+                        id="checkoutCity"
+                        name="city"
+                        autocomplete="address-level2"
+                        type="text"
+                        placeholder="City"
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="checkoutInstructions">
+                        Delivery instructions
+                    </label>
+
+                    <input
+                        id="checkoutInstructions"
+                        name="instructions"
+                        type="text"
+                        placeholder="Optional"
+                    >
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="form-card">
+
+            <h2>Payment method</h2>
+
+            <div class="form-group">
+
+                <label for="paymentMethod">Payment method</label>
+                <select id="paymentMethod" name="paymentMethod">
+
+                    <option>
+                        Cash on delivery
+                    </option>
+
+                    <option>
+                        Card payment
+                    </option>
+
+                    <option>
+                        Bank transfer
+                    </option>
+
+                </select>
+
+            </div>
+
+        </div>
+
+
+        <div class="form-card">
+
+            <h2>Order total</h2>
+
+            <div
+                id="checkoutSummary"
+            ></div>
+
+        </div>
+
+
+        <button
+            type="submit"
+            class="add-large"
+        >
+            Place Order ✓
+        </button>
+
+    </form>
+
+</main>
+
+
+<script src="js/products.js"></script>
+<script src="js/app.js"></script>
+
+</body>
+
+</html>

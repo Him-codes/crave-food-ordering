@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Browse the Crave menu of burgers, pizza, chicken, sides, drinks, desserts and more. Find your next favorite meal.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Menu — Crave</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+</head>
+
+<body>
+
+<header class="header">
+    <a href="index.html" class="logo">
+        <span>🍔</span> Crave
+    </a>
+
+    <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="menu.html" class="active">Menu</a>
+        <a href="deals.html">Deals</a>
+        <a href="orders.html">Orders</a>
+    </nav>
+
+    <div class="header-actions">
+        <button class="icon-btn" onclick="toggleTheme()" aria-label="Toggle dark mode">🌙</button>
+        <a href="favorites.html" class="icon-btn" aria-label="Favorites">♡</a>
+        <a href="cart.html" class="cart-btn">
+            🛒 <span id="cartCount">0</span>
+        </a>
+    </div>
+
+    <button class="mobile-menu" onclick="toggleMobileNav()" aria-label="Open navigation menu">☰</button>
+</header>
+
+<div id="mobileNav" class="mobile-nav">
+    <a href="index.html">Home</a>
+    <a href="menu.html">Menu</a>
+    <a href="deals.html">Deals</a>
+    <a href="favorites.html">Favorites</a>
+    <a href="orders.html">Orders</a>
+    <a href="account.html">Account</a>
+</div><section class="page-hero">
+
+    <span class="eyebrow">
+        OUR MENU
+    </span>
+
+    <h1>Find your next meal.</h1>
+
+    <p>
+        Browse burgers, pizza, chicken, drinks, desserts and more.
+        Tap any meal to see everything included before ordering.
+    </p>
+
+</section>
+
+
+<section class="section">
+
+    <div class="menu-controls">
+
+        <div class="search-box">
+
+            <label class="sr-only" for="searchInput">Search menu</label>
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search burgers, pizza, chicken..."
+            >
+
+        </div>
+
+        <button
+            class="filter-btn active"
+            data-category="All"
+        >
+            All
+        </button>
+
+        <button
+            class="filter-btn"
+            data-category="Burgers"
+        >
+            🍔 Burgers
+        </button>
+
+        <button
+            class="filter-btn"
+            data-category="Pizza"
+        >
+            🍕 Pizza
+        </button>
+
+        <button
+            class="filter-btn"
+            data-category="Chicken"
+        >
+            🍗 Chicken
+        </button>
+
+        <button
+            class="filter-btn"
+            data-category="Drinks"
+        >
+            🥤 Drinks
+        </button>
+
+        <button
+            class="filter-btn"
+            data-category="Desserts"
+        >
+            🍰 Desserts
+        </button>
+
+        <button
+            class="filter-btn nigerian-filter"
+            data-category="Nigerian"
+        >
+            🇳🇬 Nigerian
+        </button>
+
+    </div>
+
+
+    <div
+        id="menuProducts"
+        class="product-grid"
+    ></div>
+
+</section>
+
+<section class="section nigerian-showcase">
+    <div class="section-heading">
+        <div>
+            <span class="eyebrow">Made close to home</span>
+            <h2>Taste of Nigeria 🇳🇬</h2>
+            <p>Classic Nigerian favourites, brought into the Crave menu.</p>
+        </div>
+        <a href="menu.html?category=Nigerian" class="secondary-btn">See Nigerian dishes →</a>
+    </div>
+
+    <div id="nigerianProducts" class="product-grid"></div>
+    <p class="image-credit">Food photography: Ei'eke, Ask4ugo, Stephanie cheks & olaoluwapemi ogunmola via Wikimedia Commons · CC BY-SA 4.0.</p>
+</section>
+
+
+<script src="js/products.js"></script>
+<script src="js/app.js"></script>
+
+</body>
+</html>

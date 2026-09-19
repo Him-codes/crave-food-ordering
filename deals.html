@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="description" content="Explore Crave food deals and combos. Save on burgers, pizza, chicken, drinks and more.">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Deals — Crave</title>
+
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+
+</head>
+
+
+<body>
+
+<header class="header">
+    <a href="index.html" class="logo">
+        <span>🍔</span> Crave
+    </a>
+
+    <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="menu.html">Menu</a>
+        <a href="deals.html" class="active">Deals</a>
+        <a href="orders.html">Orders</a>
+    </nav>
+
+    <div class="header-actions">
+        <button class="icon-btn" onclick="toggleTheme()" aria-label="Toggle dark mode">🌙</button>
+        <a href="favorites.html" class="icon-btn" aria-label="Favorites">♡</a>
+        <a href="cart.html" class="cart-btn">
+            🛒 <span id="cartCount">0</span>
+        </a>
+    </div>
+
+    <button class="mobile-menu" onclick="toggleMobileNav()" aria-label="Open navigation menu">☰</button>
+</header>
+
+<div id="mobileNav" class="mobile-nav">
+    <a href="index.html">Home</a>
+    <a href="menu.html">Menu</a>
+    <a href="deals.html">Deals</a>
+    <a href="favorites.html">Favorites</a>
+    <a href="orders.html">Orders</a>
+    <a href="account.html">Account</a>
+</div><section class="page-hero">
+
+    <span class="eyebrow">
+        SPECIAL OFFERS
+    </span>
+
+    <h1>Deals that hit different. 🔥</h1>
+
+    <p>
+        Save money while getting the food you actually want.
+    </p>
+
+</section>
+
+
+<section class="section deals-section">
+    <div class="section-heading">
+        <div>
+            <span class="eyebrow">TODAY'S DEALS</span>
+            <h2>Pick a meal. Save a little. 🔥</h2>
+        </div>
+        <a href="menu.html">See full menu →</a>
+    </div>
+
+    <div class="category-grid deals-grid">
+        <button class="category-card deal-card" onclick="applyDeal('CRAVE20')">
+            <div class="deal-icon">🎟️</div><h3>CRAVE20</h3>
+            <p>20% off your first eligible order. One use per browser.</p><span class="deal-action">Apply code →</span>
+        </button>
+
+        <button class="category-card deal-card" onclick="addDealToCart('burger')">
+            <div class="deal-icon">🍔</div><h3>Smash Burger Combo</h3><p>Burger + loaded fries + Coke.</p><span class="deal-action">Add combo →</span>
+        </button>
+        <button class="category-card deal-card" onclick="addDealToCart('pizza')">
+            <div class="deal-icon">🍕</div><h3>Pizza Night</h3><p>Pepperoni pizza + strawberry shake.</p><span class="deal-action">Add deal →</span>
+        </button>
+        <button class="category-card deal-card" onclick="addDealToCart('jollof')">
+            <div class="deal-icon">🍛</div><h3>Jollof Combo</h3><p>Jollof rice & chicken + Coke.</p><span class="deal-action">Add combo →</span>
+        </button>
+        <button class="category-card deal-card" onclick="addDealToCart('pasta')">
+            <div class="deal-icon">🍝</div><h3>Pasta Night</h3><p>Spaghetti Bolognese + chocolate shake.</p><span class="deal-action">Add deal →</span>
+        </button>
+        <button class="category-card deal-card" onclick="addDealToCart('shrimp')">
+            <div class="deal-icon">🍤</div><h3>Shrimp Combo</h3><p>Garlic shrimp pasta + Coke.</p><span class="deal-action">Add combo →</span>
+        </button>
+        <button class="category-card deal-card" onclick="addDealToCart('sandwich')">
+            <div class="deal-icon">🥪</div><h3>Chicken Sandwich</h3><p>Crispy chicken sandwich + loaded fries.</p><span class="deal-action">Add combo →</span>
+        </button>
+        <button class="category-card deal-card" onclick="addDealToCart('pancakes')">
+            <div class="deal-icon">🥞</div><h3>Breakfast Stack</h3><p>Blueberry pancakes + Coke.</p><span class="deal-action">Add deal →</span>
+        </button>
+        <button class="category-card deal-card" onclick="addDealToCart('waffle')">
+            <div class="deal-icon">🧇</div><h3>Berry Waffle</h3><p>Berry waffle + strawberry shake.</p><span class="deal-action">Add deal →</span>
+        </button>
+        <button class="category-card deal-card" onclick="addDealToCart('mac')">
+            <div class="deal-icon">🧀</div><h3>Cheesy Side</h3><p>Creamy mac & cheese + Coke.</p><span class="deal-action">Add combo →</span>
+        </button>
+        <button class="category-card deal-card" onclick="addDealToCart('chickenrice')">
+            <div class="deal-icon">🍗</div><h3>Chicken Rice Combo</h3><p>Chicken & rice plate + loaded fries.</p><span class="deal-action">Add combo →</span>
+        </button>
+        <button class="category-card deal-card" onclick="addDealToCart('tacos')">
+            <div class="deal-icon">🌮</div><h3>Taco Combo</h3><p>Beef tacos + Coke.</p><span class="deal-action">Add combo →</span>
+        </button>
+        <button class="category-card deal-card" onclick="addDealToCart('burrito')">
+            <div class="deal-icon">🌯</div><h3>Burrito Combo</h3><p>Chicken burrito + Coke.</p><span class="deal-action">Add combo →</span>
+        </button>
+    </div>
+</section>
+
+
+<script src="js/products.js"></script>
+<script src="js/app.js"></script>
+
+</body>
+
+</html>

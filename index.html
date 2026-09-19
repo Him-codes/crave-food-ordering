@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Order burgers, pizza, chicken, drinks and more from Crave. Explore the menu, discover deals and build your perfect food order.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crave — Food Delivered</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+</head>
+
+<body>
+
+<header class="header">
+    <a href="index.html" class="logo">
+        <span>🍔</span> Crave
+    </a>
+
+    <nav class="nav">
+        <a href="index.html" class="active">Home</a>
+        <a href="menu.html">Menu</a>
+        <a href="deals.html">Deals</a>
+        <a href="orders.html">Orders</a>
+    </nav>
+
+    <div class="header-actions">
+        <button class="icon-btn" onclick="toggleTheme()" aria-label="Toggle dark mode">🌙</button>
+        <a href="favorites.html" class="icon-btn" aria-label="Favorites">♡</a>
+        <a href="cart.html" class="cart-btn">
+            🛒 <span id="cartCount">0</span>
+        </a>
+    </div>
+
+    <button class="mobile-menu" onclick="toggleMobileNav()" aria-label="Open navigation menu">☰</button>
+</header>
+
+<div id="mobileNav" class="mobile-nav">
+    <a href="index.html">Home</a>
+    <a href="menu.html">Menu</a>
+    <a href="deals.html">Deals</a>
+    <a href="favorites.html">Favorites</a>
+    <a href="orders.html">Orders</a>
+    <a href="account.html">Account</a>
+</div><main>
+
+<section class="hero">
+    <div class="hero-content">
+
+        <div class="badge">🔥 Delicious food. Delivered fast.</div>
+
+        <h1>
+            Good food.
+            <span>Good mood.</span>
+        </h1>
+
+        <p>
+            Your favorite meals, freshly prepared and delivered straight
+            to your door.
+        </p>
+
+        <div class="hero-buttons">
+            <a href="menu.html" class="primary-btn">
+                Explore Menu →
+            </a>
+
+            <a href="deals.html" class="secondary-btn">
+                View Deals
+            </a>
+        </div>
+
+        <div class="hero-stats">
+            <div>
+                <strong>4.9★</strong>
+                <small>Customer rating</small>
+            </div>
+
+            <div>
+                <strong>30 min</strong>
+                <small>Average delivery</small>
+            </div>
+
+            <div>
+                <strong data-total-products>26</strong>
+                <small>Menu items</small>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="hero-food">
+        <div class="floating-card card-one">
+            🍟
+            <span>Fresh fries</span>
+        </div>
+
+        <div class="main-food">🍔</div>
+
+        <div class="floating-card card-two">
+            ⭐ 4.9
+            <span>Top rated</span>
+        </div>
+    </div>
+</section>
+
+
+<section class="section">
+
+    <div class="section-heading">
+        <div>
+            <span class="eyebrow">EXPLORE</span>
+            <h2>What are you craving?</h2>
+        </div>
+
+        <a href="menu.html">View all →</a>
+    </div>
+
+    <div class="category-grid">
+
+        <a href="menu.html?category=Burgers" class="category-card">
+            <div>🍔</div>
+            <h3>Burgers</h3>
+            <p data-category-count="Burgers">2 meals</p>
+        </a>
+
+        <a href="menu.html?category=Pizza" class="category-card">
+            <div>🍕</div>
+            <h3>Pizza</h3>
+            <p data-category-count="Pizza">2 meals</p>
+        </a>
+
+        <a href="menu.html?category=Chicken" class="category-card">
+            <div>🍗</div>
+            <h3>Chicken</h3>
+            <p data-category-count="Chicken">3 meals</p>
+        </a>
+
+        <a href="menu.html?category=Drinks" class="category-card">
+            <div>🥤</div>
+            <h3>Drinks</h3>
+            <p data-category-count="Drinks">3 drinks</p>
+        </a>
+
+        <a href="menu.html?category=Desserts" class="category-card">
+            <div>🍰</div>
+            <h3>Desserts</h3>
+            <p data-category-count="Desserts">1 treat</p>
+        </a>
+
+    </div>
+
+</section>
+
+
+<section class="section">
+
+    <div class="section-heading">
+        <div>
+            <span class="eyebrow">POPULAR</span>
+            <h2>Customer favorites</h2>
+        </div>
+
+        <a href="menu.html">See menu →</a>
+    </div>
+
+    <div id="popularProducts" class="product-grid"></div>
+
+</section>
+
+
+<section class="promo-banner">
+
+    <div>
+        <span class="eyebrow">LIMITED OFFER</span>
+
+        <h2>20% OFF YOUR FIRST ORDER</h2>
+
+        <p>
+            Use code <strong>CRAVE20</strong> at checkout. One use per browser.
+        </p>
+
+        <a href="menu.html" class="primary-btn">
+            Start ordering
+        </a>
+    </div>
+
+    <div class="promo-emoji">🍕</div>
+
+</section>
+
+
+<section class="section about-section">
+
+    <div class="about-image">
+        <img src="https://viking-cookware.com/professional-chef-cooking-with-stainless-steel-sa.jpg" alt="Chef cooking in a professional kitchen" loading="lazy">
+    </div>
+
+    <div class="about-content">
+
+        <span class="eyebrow">WHY CRAVE?</span>
+
+        <h2>Made fresh.<br>Delivered happy.</h2>
+
+        <p>
+            We believe ordering food should be simple, quick and enjoyable.
+            That's why Crave brings your favorite meals together in one place.
+        </p>
+
+        <div class="feature">
+            <span>✓</span>
+            <div>
+                <strong>Fresh ingredients</strong>
+                <p>Quality ingredients in every meal.</p>
+            </div>
+        </div>
+
+        <div class="feature">
+            <span>✓</span>
+            <div>
+                <strong>Fast delivery</strong>
+                <p>Hot food delivered to your door.</p>
+            </div>
+        </div>
+
+        <div class="feature">
+            <span>✓</span>
+            <div>
+                <strong>Secure checkout</strong>
+                <p>Simple and protected ordering.</p>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+</main>
+
+
+<footer class="footer">
+
+    <div class="footer-grid">
+
+        <div>
+            <a href="index.html" class="logo">
+                🍔 Crave
+            </a>
+
+            <p>
+                Great food. Great prices. Great mood.
+            </p>
+        </div>
+
+        <div>
+            <h4>Explore</h4>
+            <a href="menu.html">Menu</a>
+            <a href="deals.html">Deals</a>
+            <a href="favorites.html">Favorites</a>
+        </div>
+
+        <div>
+            <h4>Account</h4>
+            <a href="account.html">My Account</a>
+            <a href="orders.html">Orders</a>
+            <a href="cart.html">Cart</a>
+        </div>
+
+        <div>
+            <h4>Contact</h4>
+            <p>hello@crave.food</p>
+            <p>+234 800 CRAVE</p>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        © 2026 Crave. All rights reserved.
+    </div>
+
+</footer>
+
+<script src="js/products.js"></script>
+<script src="js/app.js"></script>
+<script>
+    const totalProductsEl = document.querySelector('[data-total-products]');
+    if (totalProductsEl) totalProductsEl.textContent = products.length;
+
+    document.querySelectorAll('[data-category-count]').forEach((countEl) => {
+        const category = countEl.dataset.categoryCount;
+        const count = products.filter((product) => product.category === category).length;
+        const label = category === 'Drinks' ? (count === 1 ? 'drink' : 'drinks') :
+                      category === 'Desserts' ? (count === 1 ? 'treat' : 'treats') :
+                      (count === 1 ? 'meal' : 'meals');
+        countEl.textContent = `${count} ${label}`;
+    });
+</script>
+
+</body>
+</html> 
