@@ -15,7 +15,7 @@
 
 ## 📸 Preview
 
-![Crave homepage](assets/images/crave-home.png)
+![Crave homepage](assets/crave-home.png)
 
 ## ✨ Overview
 
